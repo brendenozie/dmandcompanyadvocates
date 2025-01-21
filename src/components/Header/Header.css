@@ -1,0 +1,141 @@
+/* Top Banner */
+.top-banner {
+  background: linear-gradient(90deg, #6F2B8D, #9B87C0);
+  /* Elegant gradient */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar-custom {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  padding: 15px 0;
+  box-shadow: none;
+  z-index: 1000;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #264a69;
+  font-weight: 400 !important;
+  /* Lighter font weight for smaller links */
+  text-transform: uppercase;
+  font-size: 1rem !important;;
+  /* Reduced size for links */
+  letter-spacing: 1px;
+  margin: 0 10px;
+  /* Less spacing between links */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #6F2B8D;
+  transform: scale(1.1);
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  /* Ensure logo is centered */
+}
+
+.logo-container {
+  display: inline-block;
+}
+
+.logo {
+  width: 280px;
+  height: auto;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* CTA Button */
+.btn-assessmnt {
+  background-color: #1a0471 !important;
+  color: white !important;
+  padding: 10px !important;
+  border-radius: 600px !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  letter-spacing: 1px !important;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-assessmnt:hover {
+  background-color: #9B87C0;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  background-color: #6F2B8D;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+.navbar-toggler:hover {
+  background-color: #9B87C0;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 10px 0;
+    font-size: 1rem;
+    /* Slightly bigger text on smaller screens */
+  }
+
+  .navbar-toggler {
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 220px;
+    /* Logo still large on small screens */
+  }
+
+  .top-banner {
+    font-size: 16px;
+  }
+}
