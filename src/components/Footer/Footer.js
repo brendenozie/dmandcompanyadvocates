@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import logowh from "../../assets/logowh.png"; // Replace with your firm's logo
+import logowh from "../../assets/logo.png"; // Replace with your firm's logo
 import certification from "../../assets/lawbanner.jpg"; // Replace with relevant certification logo
 
 class Footer extends Component {

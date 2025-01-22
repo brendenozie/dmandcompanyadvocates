@@ -1,41 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import './Header.css';
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 import logo from "../../assets/logo.png";
-import { NavLink, useLocation } from "react-router-dom";
-import throttle from "lodash.throttle";
 
 const Navbar = () => {
-  const [sticky, setSticky] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [state, setState] = useState({
+    isMenuOpen: false,
+    isMobileView: window.innerWidth <= 1024,
+  });
+
+  const toggleMenu = () => {
+    setState((prevState) => ({ ...prevState, isMenuOpen: !prevState.isMenuOpen }));
+  };
 
   useEffect(() => {
-    const handleScroll = () => setSticky(window.scrollY > 100);
-    const throttledScroll = throttle(handleScroll, 100);
-    window.addEventListener('scroll', throttledScroll);
-    return () => window.removeEventListener('scroll', throttledScroll);
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 1024;
+      setState((prevState) => ({ ...prevState, isMobileView: isMobile }));
+      if (!isMobile) setState((prevState) => ({ ...prevState, isMenuOpen: false }));
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleMobileNav = () => setMobileOpen(!mobileOpen);
-  const closeMobileNav = () => setMobileOpen(false);
-
   return (
-    <header className={`navbar ${sticky ? 'sticky' : ''}`}>
+    <header className="navbar">
       <div className="navbar-container">
-        <NavLink to="/" className="logo" onClick={closeMobileNav}>
-          <img src={logo} alt="Law Firm Logo" />
+        <NavLink to="/" className="logo" onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}>
+          <img src={logo} alt="Logo" />
         </NavLink>
-        <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
-          <li><NavLink to="/" onClick={closeMobileNav}>Home</NavLink></li>
-          <li><NavLink to="/#about" onClick={closeMobileNav}>About</NavLink></li>
-          <li><NavLink to="/#services" onClick={closeMobileNav}>Services</NavLink></li>
-          <li><NavLink to="/#contact" onClick={closeMobileNav}>Contact</NavLink></li>
-        </ul>
-        <button className="cta-button" onClick={closeMobileNav}>
-          Get In Touch
+        <button
+          className={`hamburger ${state.isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+          aria-expanded={state.isMenuOpen}
+        >
+          <span className="line" />
+          <span className="line" />
+          <span className="line" />
         </button>
-        <div className="hamburger-menu" onClick={toggleMobileNav}>
-          <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`} />
-        </div>
+        <nav className={`nav-links-container ${state.isMenuOpen || !state.isMobileView ? "show" : ""}`}>
+          <ul className="nav-links">
+            {["Home", "About", "Services", "Contact"].map((link) => (
+              <li key={link}>
+                <NavLink to={`/${link.toLowerCase()}`} onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}>
+                  {link}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );
