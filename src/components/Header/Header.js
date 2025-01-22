@@ -27,7 +27,11 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <NavLink to="/" className="logo" onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}>
+        <NavLink
+          to="/"
+          className="logo"
+          onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}
+        >
           <img src={logo} alt="Logo" />
         </NavLink>
         <button
@@ -42,14 +46,29 @@ const Navbar = () => {
         </button>
         <nav className={`nav-links-container ${state.isMenuOpen || !state.isMobileView ? "show" : ""}`}>
           <ul className="nav-links">
-            {["", "#About", "#Services", "Contact"].map((link) => (
-              <li key={link}>
-                <a
-                  href={`${link.toLowerCase()}`} // Use anchor links instead of NavLink
-                  onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}
-                >
-                  {link}
-                </a>
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "#about" },
+              { name: "Services", path: "#services" },
+              { name: "Contact", path: "/contact" },
+            ].map(({ name, path }) => (
+              <li key={name}>
+                {path.startsWith("#") ? (
+                  <a
+                    href={path} // Anchor link for sections
+                    onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}
+                  >
+                    {name}
+                  </a>
+                ) : (
+                  <NavLink
+                    to={path} // NavLink for page routes
+                    onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}
+                    activeClassName="active" // Optional active class
+                  >
+                    {name}
+                  </NavLink>
+                )}
               </li>
             ))}
           </ul>
