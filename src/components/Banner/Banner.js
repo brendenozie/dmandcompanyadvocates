@@ -15,7 +15,7 @@ const Banner = () => {
       <div className="banner-overlay"></div>
       <div className="banner-content">
         <h1 className="banner-heading">
-          Your Trusted Legal Partners for Every Step of the Way
+          Your Trusted Legal Partners, Every Step of the Way
         </h1>
         <p className="banner-subheading">
           Offering tailored legal solutions to meet your unique needs, with professionalism and care at every step.
