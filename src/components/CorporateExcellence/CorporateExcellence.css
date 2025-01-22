@@ -1,0 +1,96 @@
+.corporate-excellence {
+  background-color: #121212;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: url('../../assets/banner.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+
+.carousel-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  min-width: 200px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f0a500;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.stats-section {
+  background-color: #101010;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.stat-item {
+  flex: 1 1 150px;
+  max-width: 200px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #f0a500;
+  margin-bottom: 15px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0a500;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #ccc;
+}

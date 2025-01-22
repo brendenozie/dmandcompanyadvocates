@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./homepage.css";
 import Banner from "../components/Banner/Banner";
-import Insurance from "../components/Insurance/Insurance";
-import Services from "../components/Servicess/Services";
-import Plans from "../components/Plans/Plans";
-import Assessment from "../components/Assesment/Assessment";
+import LawBanner from "../components/LawBanner/LawBanner";
+import ExpertiseBanner from "../components/ExpertiseBanner/ExpertiseBanner";
+import CorporateExcellence from "../components/CorporateExcellence/CorporateExcellence";
+import Blog from "../components/Blog/Blog";
 import Faq from "../components/Faq/Faq";
-import Getstarted from "../components/GetStarted/Getstarted";
+import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
 import Review from "../components/Review/Review";
 
 const HomePage = () => {
@@ -14,12 +14,12 @@ const HomePage = () => {
   return (
     <React.Fragment>
       <Banner />
-      <Insurance />
-      <Services />
-      <Plans />
-      <Assessment />
+      <LawBanner />
+      <ExpertiseBanner />
+      <CorporateExcellence />
+      <Blog />
       <Faq />
-      <Getstarted />
+      <WhyChooseUs />
       <Review />
     </React.Fragment>
   );

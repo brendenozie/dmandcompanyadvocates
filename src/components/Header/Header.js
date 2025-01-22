@@ -1,79 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from "../../assets/logo.png";
+import { NavLink, useLocation } from "react-router-dom";
+import throttle from "lodash.throttle";
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Toggle function to show or hide menu items
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => setSticky(window.scrollY > 100);
+    const throttledScroll = throttle(handleScroll, 100);
+    window.addEventListener('scroll', throttledScroll);
+    return () => window.removeEventListener('scroll', throttledScroll);
+  }, []);
+
+  const toggleMobileNav = () => setMobileOpen(!mobileOpen);
+  const closeMobileNav = () => setMobileOpen(false);
 
   return (
-    <div>
-      {/* Top Banner */}
-      <div className="top-banner">
-        Get appointments in as little as 2 days! Start your free assessment today.
-      </div>
-
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-custom navbar-light align-items-center justify-content-center">
-        <div className="container-fluid d-flex flex-row">
-          {/* Left Side Navbar Links */}
-          <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''} order-1 order-lg-0`} id="navbarNavLeft">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#getting-started">Getting Started</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#learn-more">Learn More</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#services">Services</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Centered Logo */}
-          <a className="navbar-brand mx-auto order-0" href="/">
-            <div className="logo-container">
-              <img
-                src={logo}
-                alt="Logo"
-                className="logo"
-              />
-            </div>
-          </a>
-
-          {/* Right Side Navbar Links */}
-          <div className={`collapse navbar-collapse ${isOpen ? 'show' : 'align-items-end justify-content-end'} order-3 order-lg-2`} id="navbarNavRight">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#refer-patient">Refer a Patient</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#login">Member Login</a>
-              </li>
-              <li className="nav-item">
-                <a className="btn btn-assessmnt" href="#assessment">FREE Assessment</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Navbar Toggler */}
-          <button className="navbar-toggler" type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavLeft #navbarNavRight" 
-            aria-controls="navbarNavLeft navbarNavRight" 
-            onClick={toggleNavbar}
-            aria-expanded={isOpen} aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+    <header className={`navbar ${sticky ? 'sticky' : ''}`}>
+      <div className="navbar-container">
+        <NavLink to="/" className="logo" onClick={closeMobileNav}>
+          <img src={logo} alt="Law Firm Logo" />
+        </NavLink>
+        <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>
+          <li><NavLink to="/" onClick={closeMobileNav}>Home</NavLink></li>
+          <li><NavLink to="/#about" onClick={closeMobileNav}>About</NavLink></li>
+          <li><NavLink to="/#services" onClick={closeMobileNav}>Services</NavLink></li>
+          <li><NavLink to="/#contact" onClick={closeMobileNav}>Contact</NavLink></li>
+        </ul>
+        <button className="cta-button" onClick={closeMobileNav}>
+          Get In Touch
+        </button>
+        <div className="hamburger-menu" onClick={toggleMobileNav}>
+          <i className={`fa-solid ${mobileOpen ? 'fa-xmark' : 'fa-bars'}`} />
         </div>
-      </nav>
-    </div>
+      </div>
+    </header>
   );
 };
 
-export default Header;
+export default Navbar;
