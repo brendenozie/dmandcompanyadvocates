@@ -62,7 +62,7 @@ const Blog = () => {
               <p className="blog-date">{blog.date}</p>
               <p className="blog-description">{blog.description}</p>
               <Link to={"/contact"} >
-                <button className="blog-read-more">Read More</button>
+                <button className="blog-read-more">React Out</button>
               </Link>
             </div>
           </div>
