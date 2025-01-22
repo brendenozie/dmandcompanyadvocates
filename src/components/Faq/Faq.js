@@ -52,7 +52,7 @@ class Faq extends Component {
           {faqItems.map((item, index) => (
             <FAQItem key={index} question={item.question} answer={item.answer} />
           ))}
-          <a href="#contact" className="contact-link">Didn't find what you're looking for? Contact us.</a>
+          <a href="/contact" className="contact-link">Didn't find what you're looking for? Contact us.</a>
         </div>
       </section>
     );

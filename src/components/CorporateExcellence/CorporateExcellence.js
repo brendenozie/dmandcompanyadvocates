@@ -1,17 +1,30 @@
-// App.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CorporateExcellence.css";
 
 const CorporateExcellence = () => {
+  const [currentItem, setCurrentItem] = useState(0);
+
+  const carouselItems = [
+    "Family Law Triumph",
+    "Proven Advocacy",
+    "Corporate Compliance Victory"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentItem((prev) => (prev + 1) % carouselItems.length);
+    }, 3000); // Automatically change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="corporate-container">
       {/* Top Banner */}
       <div className="banner">
         <h1>Corporate Excellence</h1>
         <div className="carousel">
-          <div className="carousel-item">Family Law Triumph</div>
-          <div className="carousel-item">Proven Advocacy</div>
-          <div className="carousel-item">Corporate Compliance Victory</div>
+          <div className="carousel-item">{carouselItems[currentItem]}</div>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import "./WhyChooseUs.css";
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
   const stats = [
@@ -32,9 +33,11 @@ const WhyChooseUs = () => {
           </div>
         ))}
       </div>
-      <button className="cta-button">
-        Schedule a consultation
-      </button>
+      <Link to={"/contact"}>
+        <button className="cta-button">
+          Schedule a consultation
+        </button>
+      </Link>
     </section>
   );
 };

@@ -2,6 +2,7 @@
 import React from 'react';
 import './LegalServicesSection.css';
 import consultationImage from '../../assets/lawbanner.jpg';
+import { Link } from 'react-router-dom';
 
 function LegalServicesSection() {
   return (
@@ -14,7 +15,9 @@ function LegalServicesSection() {
             <p>
               Lawware delivers trusted legal solutions with integrity and excellence. We empower clients by safeguarding their rights and providing expert guidance.
             </p>
-            <button className="learn-more">Learn More</button>
+            <Link to={"/contact"} >
+              <button className="learn-more">Learn More</button>
+            </Link>
           </header>
 
           <div className="card-section">

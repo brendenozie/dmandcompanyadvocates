@@ -32,39 +32,39 @@ class Footer extends Component {
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">Practice Areas</h6>
               <ul className="list-unstyled">
-                <li><a href="/" className="text-white">Family Law</a></li>
-                <li><a href="/" className="text-white">Criminal Defense</a></li>
-                <li><a href="/" className="text-white">Personal Injury</a></li>
-                <li><a href="/" className="text-white">Business Law</a></li>
+                <li><a href="/contact" className="text-white">Family Law</a></li>
+                <li><a href="/contact" className="text-white">Criminal Defense</a></li>
+                <li><a href="/contact" className="text-white">Personal Injury</a></li>
+                <li><a href="/contact" className="text-white">Business Law</a></li>
               </ul>
             </div>
 
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">About Us</h6>
               <ul className="list-unstyled">
-                <li><a href="/" className="text-white">Our Firm</a></li>
-                <li><a href="/" className="text-white">Our Team</a></li>
-                <li><a href="/" className="text-white">Blog</a></li>
+                <li><a href="/contact" className="text-white">Our Firm</a></li>
+                <li><a href="/contact" className="text-white">Our Team</a></li>
+                <li><a href="/contact" className="text-white">Blog</a></li>
               </ul>
             </div>
 
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">Resources</h6>
               <ul className="list-unstyled">
-                <li><a href="/" className="text-white">FAQ</a></li>
-                <li><a href="/" className="text-white">Client Resources</a></li>
-                <li><a href="/" className="text-white">Legal Guides</a></li>
-                <li><a href="/" className="text-white">Contact Us</a></li>
+                <li><a href="/contact" className="text-white">FAQ</a></li>
+                <li><a href="/contact" className="text-white">Client Resources</a></li>
+                <li><a href="/contact" className="text-white">Legal Guides</a></li>
+                <li><a href="/contact" className="text-white">Contact Us</a></li>
               </ul>
             </div>
 
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">Legal</h6>
               <ul className="list-unstyled">
-                <li><a href="/" className="text-white">Terms of Use</a></li>
-                <li><a href="/" className="text-white">Privacy Policy</a></li>
-                <li><a href="/" className="text-white">Disclaimer</a></li>
-                <li><a href="/" className="text-white">Non-Discrimination Policy</a></li>
+                <li><a href="/contact" className="text-white">Terms of Use</a></li>
+                <li><a href="/contact" className="text-white">Privacy Policy</a></li>
+                <li><a href="/contact" className="text-white">Disclaimer</a></li>
+                <li><a href="/contact" className="text-white">Non-Discrimination Policy</a></li>
               </ul>
             </div>
           </div>

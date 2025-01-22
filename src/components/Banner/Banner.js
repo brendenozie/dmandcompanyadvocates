@@ -24,7 +24,7 @@ const Banner = () => {
           <a href="#services" className="cta-button" aria-label="Learn More About Our Services">
             Learn More
           </a>
-          <a href="#contact" className="cta-button" aria-label="Contact Us for Legal Assistance">
+          <a href="/contact" className="cta-button" aria-label="Contact Us for Legal Assistance">
             Contact Us
           </a>
         </div>

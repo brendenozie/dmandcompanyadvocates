@@ -5,6 +5,7 @@ import blogImage1 from "../../assets/banner.jpg"; // Replace with actual image p
 import blogImage2 from "../../assets/banner.jpg"; // Replace with actual image path
 import blogImage3 from "../../assets/banner.jpg"; // Replace with actual image path
 import blogImage4 from "../../assets/banner.jpg"; // Replace with actual image path
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const blogList = [
@@ -60,7 +61,9 @@ const Blog = () => {
               <h2 className="blog-title">{blog.title}</h2>
               <p className="blog-date">{blog.date}</p>
               <p className="blog-description">{blog.description}</p>
-              <button className="blog-read-more">Read More</button>
+              <Link to={"/contact"} >
+                <button className="blog-read-more">Read More</button>
+              </Link>
             </div>
           </div>
         ))}

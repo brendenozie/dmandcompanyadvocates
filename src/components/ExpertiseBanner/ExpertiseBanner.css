@@ -14,22 +14,23 @@
 
 /* Header Section */
 .header-section .heading {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: 800;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .header-section .subheading {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #d5d5d5;
   line-height: 1.6;
 }
 
 /* Filter Buttons */
 .filter-buttons {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .filter-button {
@@ -38,10 +39,11 @@
   border: 2px solid #2e6600;
   border-radius: 20px;
   padding: 10px 20px;
-  font-size: 0.9rem;
-  margin: 0 10px;
+  font-size: 1rem;
+  margin: 0 15px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
 }
 
 .filter-button.active {
@@ -52,25 +54,32 @@
 .filter-button:hover {
   background: #09b300;
   color: white;
+  transform: translateY(-2px);
 }
 
 /* Cards Grid */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Card Design */
 .expertise-card {
   background: white;
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(30px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: fadeInUp 0.5s forwards;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .icon-container img {
@@ -81,7 +90,7 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #2e6600;
   margin-bottom: 10px;
 }
@@ -96,11 +105,11 @@
 .learn-more-button {
   background-color: #2e6600;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: background-color 0.3s, transform 0.3s;
 }
 

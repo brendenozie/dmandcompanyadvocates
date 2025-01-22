@@ -4,6 +4,7 @@ import iconBusiness from '../../assets/lawbanner.jpg';
 import iconHealthcare from '../../assets/lawbanner.jpg';
 import iconCorporate from '../../assets/lawbanner.jpg';
 import iconFamily from '../../assets/lawbanner.jpg';
+import { Link } from 'react-router-dom';
 
 const ExpertiseShowcase = () => {
   const cards = [
@@ -42,7 +43,7 @@ const ExpertiseShowcase = () => {
   const filteredCards = filter === 'All' ? cards : cards.filter((card) => card.category === filter);
 
   return (
-    <section className="expertise-showcase" id='services' aria-label="Expertise Showcase">
+    <section className="expertise-showcase" id="services" aria-label="Expertise Showcase">
       <div className="container">
         <div className="header-section">
           <h2 className="heading">Our Expertise</h2>
@@ -73,7 +74,9 @@ const ExpertiseShowcase = () => {
               </div>
               <h3 className="card-title">{card.title}</h3>
               <p className="card-description">{card.description}</p>
-              <button className="learn-more-button">Learn More</button>
+              <Link to="/contact">
+                <button className="learn-more-button">Learn More</button>
+              </Link>
             </div>
           ))}
         </div>
