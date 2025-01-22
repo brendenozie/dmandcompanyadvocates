@@ -24,7 +24,7 @@ const ContactUs = () => {
           </div>
           <div className="contact-item">
             <div className="icon">🏠</div>
-            <span>123 Main Street, City, Country</span>
+            <span>Nairobi, Kenya</span>
           </div>
         </div>
 
