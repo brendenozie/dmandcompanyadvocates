@@ -1,67 +1,49 @@
+// App.js
 import React from "react";
 import "./CorporateExcellence.css";
-import familyLawImage from "../../assets/banner.jpg";
-import businessLawImage from "../../assets/banner.jpg";
-import corporateLawImage from "../../assets/banner.jpg";
 
 const CorporateExcellence = () => {
-  const carouselItems = [
-    {
-      image: familyLawImage,
-      title: "Family Law Triumph",
-      subtitle: "Family Law",
-    },
-    {
-      image: businessLawImage,
-      title: "Proven Advocacy",
-      subtitle: "Business Law",
-    },
-    {
-      image: corporateLawImage,
-      title: "Corporate Compliance Victory",
-      subtitle: "Corporate Law",
-    },
-  ];
-
-  const stats = [
-    { icon: "⏳", value: "18+", label: "Years of experience" },
-    { icon: "✅", value: "98%", label: "Successful resolutions" },
-    { icon: "🤝", value: "500+", label: "Satisfied customers" },
-    { icon: "🏆", value: "50+", label: "Awards and recognitions" },
-    { icon: "📁", value: "100+", label: "Projects completed" },
-  ];
-
   return (
-    <section className="corporate-excellence">
-      {/* Hero Section */}
-      <div className="hero-section">
-        <h1 className="hero-title">Corporate Excellence</h1>
+    <div className="corporate-container">
+      {/* Top Banner */}
+      <div className="banner">
+        <h1>Corporate Excellence</h1>
         <div className="carousel">
-          {carouselItems.map((item, index) => (
-            <div key={index} className="carousel-card">
-              <div className="card-image">
-                <img src={item.image} alt={item.title} />
-              </div>
-              <h3 className="card-title">{item.title}</h3>
-              <p className="card-subtitle">{item.subtitle}</p>
-            </div>
-          ))}
+          <div className="carousel-item">Family Law Triumph</div>
+          <div className="carousel-item">Proven Advocacy</div>
+          <div className="carousel-item">Corporate Compliance Victory</div>
         </div>
       </div>
 
       {/* Stats Section */}
       <div className="stats-section">
-        <div className="stats-container">
-          {stats.map((stat, index) => (
-            <div key={index} className="stat-item">
-              <div className="stat-icon">{stat.icon}</div>
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
-          ))}
+        <div className="stat">
+          <div className="icon">⏳</div>
+          <p className="value">18+</p>
+          <p className="label">Years of experience</p>
+        </div>
+        <div className="stat">
+          <div className="icon">✔️</div>
+          <p className="value">98%</p>
+          <p className="label">Successful resolutions</p>
+        </div>
+        <div className="stat">
+          <div className="icon">🤝</div>
+          <p className="value">500+</p>
+          <p className="label">Satisfied customers</p>
+        </div>
+        <div className="stat">
+          <div className="icon">🏆</div>
+          <p className="value">50+</p>
+          <p className="label">Awards and recognitions</p>
+        </div>
+        <div className="stat">
+          <div className="icon">📂</div>
+          <p className="value">100+</p>
+          <p className="label">Projects completed</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

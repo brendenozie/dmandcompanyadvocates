@@ -19,9 +19,13 @@ class Review extends Component {
             <div class="testimonial-card">
                     <div class="quote-icon">“</div>
                     <p class="testimonial-quote">
-                        My health has significantly improved! The care provided to me was exceptional! The medication I'm taking is
-                        excellent, and the personalized support I've received is remarkable! My medical professional listens to me with
-                        compassion and warmth!
+                        My experience with the law firm has been outstanding! 
+                        The legal support provided to me was exceptional. 
+                        The advice and representation I received were top-notch, 
+                        and the personalized attention to my case was remarkable. 
+                        My attorney listened to me with compassion and understanding, 
+                        making me feel confident and supported throughout the entire process!
+
                     </p>
                     <div class="testimonial-author">ARIA T</div>
                     <div class="stars">★★★★★</div>

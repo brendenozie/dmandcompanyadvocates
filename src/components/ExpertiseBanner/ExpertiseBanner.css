@@ -1,150 +1,123 @@
-.expertise-banner {
-  background: linear-gradient(135deg, #121212, #1c1c1c);
-  color: #fff;
+/* General Container */
+.expertise-showcase {
+  background-color: #022902;
   padding: 60px 20px;
-  text-align: center;
-  position: relative;
-}
-
-.expertise-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../../assets/banner.jpg') center/cover no-repeat;
-  opacity: 0.2;
-  z-index: 1;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  text-align: center;
 }
 
-.header-section {
-  margin-bottom: 40px;
+/* Header Section */
+.header-section .heading {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 800;
 }
 
-.heading {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #f0a500;
-  margin-bottom: 10px;
-}
-
-.subheading {
-  font-size: 1.3rem;
-  line-height: 1.8;
+.header-section .subheading {
+  font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #ddd;
+  color: #d5d5d5;
+  line-height: 1.6;
 }
 
-.view-all-button {
-  background-color: transparent;
-  border: 2px solid #f0a500;
-  color: #f0a500;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 1rem;
+/* Filter Buttons */
+.filter-buttons {
+  margin: 20px 0;
+}
+
+.filter-button {
+  background: #ffffff;
+  color: #2e6600;
+  border: 2px solid #2e6600;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  margin: 0 10px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.3s;
 }
 
-.view-all-button:hover {
-  background-color: #f0a500;
-  color: #121212;
+.filter-button.active {
+  background: #2e6600;
+  color: #ffffff;
 }
 
+.filter-button:hover {
+  background: #09b300;
+  color: white;
+}
+
+/* Cards Grid */
 .cards-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  justify-content: center;
 }
 
+/* Card Design */
 .expertise-card {
-  background: #1c1c1c;
+  background: white;
   border-radius: 15px;
-  padding: 25px;
-  max-width: 300px;
-  flex: 1 1 300px;
-  text-align: left;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-}
-
-.expertise-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-}
-
-.icon-container {
-  background-color: #292929;
   padding: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
 }
 
 .icon-container img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  max-width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .card-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #f0a500;
-  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #2e6600;
+  margin-bottom: 10px;
 }
 
 .card-description {
   font-size: 1rem;
-  line-height: 1.8;
-  color: #ccc;
+  color: #666;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
 .learn-more-button {
-  background-color: #f0a500;
-  color: #121212;
+  background-color: #2e6600;
+  color: white;
+  padding: 10px 20px;
   border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  font-weight: bold;
   border-radius: 25px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .learn-more-button:hover {
-  background-color: #e29500;
+  background-color: #00b300;
+  transform: scale(1.05);
 }
 
-.pagination-dots {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: #444;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.dot.active,
-.dot:hover {
-  background-color: #f0a500;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

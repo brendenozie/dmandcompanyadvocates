@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./homepage.css";
 import Banner from "../components/Banner/Banner";
-import LawBanner from "../components/LawBanner/LawBanner";
+import LegalServicesSection from "../components/LegalServicesSection/LegalServicesSection";
 import ExpertiseBanner from "../components/ExpertiseBanner/ExpertiseBanner";
 import CorporateExcellence from "../components/CorporateExcellence/CorporateExcellence";
 import Blog from "../components/Blog/Blog";
@@ -14,10 +14,10 @@ const HomePage = () => {
   return (
     <React.Fragment>
       <Banner />
-      <LawBanner />
+      <LegalServicesSection />
       <ExpertiseBanner />
-      <CorporateExcellence />
       <Blog />
+      <CorporateExcellence />
       <Faq />
       <WhyChooseUs />
       <Review />

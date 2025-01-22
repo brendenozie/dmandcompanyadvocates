@@ -22,11 +22,28 @@ const FAQItem = ({ question, answer }) => {
 class Faq extends Component {
   render() {
     const faqItems = [
-      { question: "What happens if my insurance is not accepted?", answer: "If your insurance is not accepted, we offer a variety of affordable self-pay options. Reach out to our support team for more information." },
-      { question: "What about men's mental health?", answer: "Men's mental health is just as important, and our professionals are experienced in providing care for a range of issues including depression, anxiety, and stress." },
-      { question: "How can I reach out if I have a crisis?", answer: "If you are in a crisis, please call your local emergency number or reach out to a crisis hotline immediately. Our service is available for scheduled sessions, not emergencies." },
-      { question: "How do I get my prescription?", answer: "Once prescribed, we can have your medication delivered to your preferred pharmacy. For certain medications, delivery is available directly to your home." },
-    ];
+          { 
+            question: "What types of legal services do you offer?", 
+            answer: "We provide a range of legal services, including family law, criminal defense, personal injury, estate planning, and business law. Contact us to learn more about how we can assist you." 
+          },
+          { 
+            question: "What should I bring to my first consultation?", 
+            answer: "For your first consultation, bring any relevant documents, contracts, or correspondence related to your case. This helps us provide accurate advice and evaluate your situation effectively." 
+          },
+          { 
+            question: "How do your fees work?", 
+            answer: "Our fees vary depending on the type and complexity of the case. We offer transparent billing options and will discuss costs during your initial consultation to ensure clarity." 
+          },
+          { 
+            question: "Do you offer free consultations?", 
+            answer: "Yes, we offer a free initial consultation to discuss your case and explain how we can help. This allows us to understand your needs and provide tailored advice." 
+          },
+          { 
+            question: "How do I get updates on my case?", 
+            answer: "We keep our clients informed at every stage of their case. You can expect regular updates via phone, email, or our secure client portal." 
+          },
+        ];
+
 
     return (
       <section className="faq-section-body">
@@ -35,7 +52,7 @@ class Faq extends Component {
           {faqItems.map((item, index) => (
             <FAQItem key={index} question={item.question} answer={item.answer} />
           ))}
-          <a href="https://provider.kareo.com/mwikya-redempta" className="contact-link">Didn't find what you're looking for? Contact us.</a>
+          <a href="#contact" className="contact-link">Didn't find what you're looking for? Contact us.</a>
         </div>
       </section>
     );

@@ -1,0 +1,136 @@
+/* // LegalServicesSection.css */
+.app {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding:100px 100px;
+  height: 100vh;
+  background-color: #f9f5ec;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more {
+  background-color: #ffa500;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  gap: 20px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: white;
+}
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.video-card {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  background-color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.legal-progress-section {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.progress {
+  background-color: #f5f5f5;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background-color: #ffa500;
+  height: 100%;
+}

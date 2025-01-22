@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
         ))}
       </div>
       <button className="cta-button">
-        Umów się na bezpłatną konsultację {/* Polish for "Schedule a free consultation" */}
+        Schedule a consultation
       </button>
     </section>
   );
