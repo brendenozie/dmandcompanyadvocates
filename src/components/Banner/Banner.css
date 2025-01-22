@@ -11,6 +11,11 @@
   font-family: 'Arial', sans-serif;
   overflow: hidden;
   text-align: left;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+      url('../../assets/banner.jpg') no-repeat center/cover;
+    color: white;
+    padding: 80px 20px;
+    position: relative;
   /* Default alignment for larger screens */
 }
 

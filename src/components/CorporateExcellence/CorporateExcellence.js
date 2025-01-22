@@ -21,7 +21,7 @@ const CorporateExcellence = () => {
   return (
     <div className="corporate-container">
       {/* Top Banner */}
-      <div className="banner">
+      <div className="corporate-banner">
         <h1>Corporate Excellence</h1>
         <div className="carousel">
           <div className="carousel-item">{carouselItems[currentItem]}</div>

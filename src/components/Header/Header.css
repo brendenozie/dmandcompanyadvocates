@@ -28,9 +28,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1200px;
+  /* Max width for larger screens */
+  margin: 0 auto;
+  /* Centers the navbar-container on larger screens */
 }
 
 .logo img {
@@ -185,13 +187,16 @@
   }
 
   .navbar-container {
-    max-width: 1200px;
+    max-width: 1124px;
+    justify-content: space-around;
     /* Define a max-width for larger screens */
     margin: 0 auto;
+    /* Center the container on larger screens */
   }
 
   .navbar {
-    width: auto;
+    width: 100%;
+    
     /* Allow auto width for larger screens */
   }
 }
