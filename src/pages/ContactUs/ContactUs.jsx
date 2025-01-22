@@ -41,14 +41,12 @@ const ContactUs = () => {
             src="https://www.google.com/maps/embed?pb=your-location-map-url-here"
             width="100%"
             height="450"
-            style={{ border: 0, borderRadius: "8px" }}
+            style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>
       </section>
-
-      
     </div>
   );
 };
