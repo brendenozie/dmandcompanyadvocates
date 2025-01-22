@@ -75,7 +75,7 @@ class Footer extends Component {
               <p>Committed to Excellence in Legal Practice</p>
             </div>
             <div className="col-md-6 text-right">
-              <a href="/"><img src={logowh} alt="Certifications" /></a>
+              <a href="/contact"><img src={logowh} alt="Certifications" /></a>
             </div>
           </div>
 
