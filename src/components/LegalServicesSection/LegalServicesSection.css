@@ -1,59 +1,66 @@
-/* // LegalServicesSection.css */
 .app {
   font-family: 'Arial', sans-serif;
   color: #333;
   margin: 0 auto;
-  padding:100px 100px;
-  height: 100vh;
+  padding: 20px;
+  height: 110vh;
   background-color: #f9f5ec;
+  align-content: center;
 }
 
 .layout {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  /* Increased spacing for larger screens */
+  justify-content: space-between;
 }
 
-.left-section {
-  flex: 1;
-  min-width: 300px;
-}
-
+.left-section,
 .right-section {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
+  padding: 20px;
+  /* Added consistent padding */
 }
 
 .header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  /* Added extra margin */
+  text-align: center;
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 800;
 }
 
 .header p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .learn-more {
   background-color: #ffa500;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   color: white;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #e59400;
 }
 
 .card-section {
   display: flex;
-  flex-direction: row;
-  flex: auto;
+  flex-wrap: wrap;
   gap: 20px;
+  /* Space between cards */
 }
 
 .card {
@@ -66,6 +73,9 @@
   align-items: flex-end;
   overflow: hidden;
   color: white;
+  flex: 1;
+  min-width: 280px;
+  /* Ensures cards don't shrink too much */
 }
 
 .card-overlay {
@@ -73,15 +83,21 @@
   padding: 15px;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .video-card {
@@ -93,44 +109,127 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+  /* Added margin for spacing */
 }
 
 .play-button {
   background-color: white;
-  border: none;
   font-size: 24px;
   cursor: pointer;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .legal-progress-section {
   margin-top: 20px;
 }
 
-.progress-bar {
+.legal-progress-bar {
   margin-bottom: 20px;
 }
 
 .progress-info {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 .progress {
   background-color: #f5f5f5;
-  height: 12px;
+  height: 10px;
   border-radius: 6px;
   overflow: hidden;
-  position: relative;
 }
 
 .progress-fill {
   background-color: #ffa500;
   height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .layout {
+    gap: 20px;
+    /* Reduce gap for medium screens */
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .video-card {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app{
+    height: auto;
+  }
+
+  .layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    height: 160px;
+  }
+
+  .video-card {
+    height: 200px;
+  }
+
+  .progress-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+      height: auto;
+    }
+    
+  .header h1 {
+    font-size: 1.25rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
+  }
+
+  .learn-more {
+    font-size: 14px;
+  }
+
+  .card {
+    height: 140px;
+  }
+
+  .video-card {
+    height: 150px;
+  }
 }
