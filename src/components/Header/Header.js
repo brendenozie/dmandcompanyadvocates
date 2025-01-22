@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logowh.png";
 
 const Navbar = () => {
   const [state, setState] = useState({
@@ -42,11 +42,14 @@ const Navbar = () => {
         </button>
         <nav className={`nav-links-container ${state.isMenuOpen || !state.isMobileView ? "show" : ""}`}>
           <ul className="nav-links">
-            {["Home", "About", "Services", "Contact"].map((link) => (
+            {["", "#About", "#Services", "Contact"].map((link) => (
               <li key={link}>
-                <NavLink to={`/${link.toLowerCase()}`} onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}>
+                <a
+                  href={`${link.toLowerCase()}`} // Use anchor links instead of NavLink
+                  onClick={() => setState((prevState) => ({ ...prevState, isMenuOpen: false }))}
+                >
                   {link}
-                </NavLink>
+                </a>
               </li>
             ))}
           </ul>

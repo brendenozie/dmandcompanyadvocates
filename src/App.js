@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Homepage from "./pages/homepage";
 import Footer from "./components/Footer/Footer";
+import ContactUs from './pages/ContactUs/ContactUs';
 
 class App extends Component {
   constructor(props) {
@@ -67,6 +68,7 @@ class App extends Component {
       {<Header />}      
         <Routes>
             <Route exact path="/" element={<Homepage />} />
+            <Route exact path="/contact" element={<ContactUs />} />
         </Routes>      
       {<Footer />}
       </div>

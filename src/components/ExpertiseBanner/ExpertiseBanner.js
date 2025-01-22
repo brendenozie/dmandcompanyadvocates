@@ -42,7 +42,7 @@ const ExpertiseShowcase = () => {
   const filteredCards = filter === 'All' ? cards : cards.filter((card) => card.category === filter);
 
   return (
-    <section className="expertise-showcase" aria-label="Expertise Showcase">
+    <section className="expertise-showcase" id='services' aria-label="Expertise Showcase">
       <div className="container">
         <div className="header-section">
           <h2 className="heading">Our Expertise</h2>

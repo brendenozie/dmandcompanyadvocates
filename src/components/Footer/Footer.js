@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import logowh from "../../assets/logo.png"; // Replace with your firm's logo
+import logowh from "../../assets/logowh.png"; // Replace with your firm's logo
 import certification from "../../assets/lawbanner.jpg"; // Replace with relevant certification logo
 
 class Footer extends Component {
@@ -75,7 +75,7 @@ class Footer extends Component {
               <p>Committed to Excellence in Legal Practice</p>
             </div>
             <div className="col-md-6 text-right">
-              <a href="/"><img src={certification} alt="Certifications" /></a>
+              <a href="/"><img src={logowh} alt="Certifications" /></a>
             </div>
           </div>
 

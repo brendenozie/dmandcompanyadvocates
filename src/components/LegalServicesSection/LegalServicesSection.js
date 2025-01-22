@@ -5,7 +5,7 @@ import consultationImage from '../../assets/lawbanner.jpg';
 
 function LegalServicesSection() {
   return (
-    <div className="app">
+    <div className="app" id='about'>
       <div className="layout">
         {/* Left Section */}
         <div className="left-section">
