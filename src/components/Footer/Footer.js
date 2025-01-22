@@ -32,39 +32,39 @@ class Footer extends Component {
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">Practice Areas</h6>
               <ul className="list-unstyled">
-                <li><a href="/family-law" className="text-white">Family Law</a></li>
-                <li><a href="/criminal-defense" className="text-white">Criminal Defense</a></li>
-                <li><a href="/personal-injury" className="text-white">Personal Injury</a></li>
-                <li><a href="/business-law" className="text-white">Business Law</a></li>
+                <li><a href="/" className="text-white">Family Law</a></li>
+                <li><a href="/" className="text-white">Criminal Defense</a></li>
+                <li><a href="/" className="text-white">Personal Injury</a></li>
+                <li><a href="/" className="text-white">Business Law</a></li>
               </ul>
             </div>
 
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">About Us</h6>
               <ul className="list-unstyled">
-                <li><a href="/about" className="text-white">Our Firm</a></li>
-                <li><a href="/team" className="text-white">Our Team</a></li>
-                <li><a href="/blog" className="text-white">Blog</a></li>
+                <li><a href="/" className="text-white">Our Firm</a></li>
+                <li><a href="/" className="text-white">Our Team</a></li>
+                <li><a href="/" className="text-white">Blog</a></li>
               </ul>
             </div>
 
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">Resources</h6>
               <ul className="list-unstyled">
-                <li><a href="/faq" className="text-white">FAQ</a></li>
-                <li><a href="/client-resources" className="text-white">Client Resources</a></li>
-                <li><a href="/legal-guides" className="text-white">Legal Guides</a></li>
-                <li><a href="/contact" className="text-white">Contact Us</a></li>
+                <li><a href="/" className="text-white">FAQ</a></li>
+                <li><a href="/" className="text-white">Client Resources</a></li>
+                <li><a href="/" className="text-white">Legal Guides</a></li>
+                <li><a href="/" className="text-white">Contact Us</a></li>
               </ul>
             </div>
 
             <div className="col-md-2 mb-3">
               <h6 className="text-uppercase font-weight-bold mb-3">Legal</h6>
               <ul className="list-unstyled">
-                <li><a href="/terms" className="text-white">Terms of Use</a></li>
-                <li><a href="/privacy" className="text-white">Privacy Policy</a></li>
-                <li><a href="/disclaimer" className="text-white">Disclaimer</a></li>
-                <li><a href="/non-discrimination" className="text-white">Non-Discrimination Policy</a></li>
+                <li><a href="/" className="text-white">Terms of Use</a></li>
+                <li><a href="/" className="text-white">Privacy Policy</a></li>
+                <li><a href="/" className="text-white">Disclaimer</a></li>
+                <li><a href="/" className="text-white">Non-Discrimination Policy</a></li>
               </ul>
             </div>
           </div>
@@ -75,7 +75,7 @@ class Footer extends Component {
               <p>Committed to Excellence in Legal Practice</p>
             </div>
             <div className="col-md-6 text-right">
-              <a href="/certifications"><img src={certification} alt="Certifications" /></a>
+              <a href="/"><img src={certification} alt="Certifications" /></a>
             </div>
           </div>
 
