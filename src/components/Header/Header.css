@@ -3,9 +3,9 @@
   /* Dark background */
   --text-color: #ffffff;
   /* White text */
-  --accent-color: #ff6f61;
+  --accent-color:rgb(105, 255, 97);
   /* Accent color for hover */
-  --highlight-color: #ff3b2b;
+  --highlight-color: #01400c;
   /* Softer hover color */
   --mobile-menu-bg: rgba(0, 0, 0, 0.95);
   /* Translucent black for mobile menu */

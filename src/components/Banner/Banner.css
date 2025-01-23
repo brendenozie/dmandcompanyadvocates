@@ -35,7 +35,8 @@
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  background: "#6cf50a";
+  /* linear-gradient(90deg, #ff7e5f, #feb47b); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -53,7 +54,8 @@
 }
 
 .cta-button {
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  /* background: linear-gradient(90deg, #ff7e5f, #feb47b); */
+  background:linear-gradient(90deg, #5fff8d, #7bfe8e);
   color: #fff;
   padding: 15px 30px;
   font-size: 1rem;
