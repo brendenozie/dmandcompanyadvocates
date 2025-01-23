@@ -11,9 +11,8 @@
   font-family: 'Arial', sans-serif;
   overflow: hidden;
   text-align: left;
-  background: linear-gradient(#0000005c,
-    #00000085),
-    url(/static/media/banner.b7ec75a….jpg) no-repeat 50% / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+      url('../../assets/banner.jpg') no-repeat center/cover;
     color: white;
     padding: 80px 20px;
     position: relative;
