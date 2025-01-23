@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './ExpertiseBanner.css';
-import iconBusiness from '../../assets/lawbanner.jpg';
-import iconHealthcare from '../../assets/lawbanner.jpg';
-import iconCorporate from '../../assets/lawbanner.jpg';
-import iconFamily from '../../assets/lawbanner.jpg';
+import iconBusiness from '../../assets/regulation.png';
+import iconHealthcare from '../../assets/ethical.png';
+import iconCorporate from '../../assets/government.png';
+import iconFamily from '../../assets/family-law.png';
 import { Link } from 'react-router-dom';
 
 const ExpertiseShowcase = () => {
