@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./CorporateExcellence.css";
+import MeetTheTeam from "../MeetTheTeam/MeetTheTeam";
 
 const CorporateExcellence = () => {
   const [currentItem, setCurrentItem] = useState(0);
@@ -28,6 +29,7 @@ const CorporateExcellence = () => {
         </div>
       </div>
 
+      <MeetTheTeam />
       {/* Stats Section */}
       <div className="stats-section">
         <div className="stat">

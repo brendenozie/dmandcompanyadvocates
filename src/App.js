@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import Homepage from "./pages/homepage";
 import Footer from "./components/Footer/Footer";
 import ContactUs from './pages/ContactUs/ContactUs';
+import About from './pages/About/About';
 
 class App extends Component {
   constructor(props) {
@@ -69,6 +70,7 @@ class App extends Component {
         <Routes>
             <Route exact path="/" element={<Homepage />} />
             <Route exact path="/contact" element={<ContactUs />} />
+            <Route exact path="/about" element={<About />} />
         </Routes>      
       {<Footer />}
       </div>

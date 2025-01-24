@@ -48,7 +48,7 @@ const Navbar = () => {
           <ul className="nav-links">
             {[
               { name: "Home", path: "/" },
-              { name: "About", path: "#about" },
+              { name: "About", path: "/about" },
               { name: "Services", path: "#services" },
               { name: "Contact", path: "/contact" },
             ].map(({ name, path }) => (

@@ -9,11 +9,45 @@ import { Link } from 'react-router-dom';
 const ExpertiseShowcase = () => {
   const cards = [
     {
+      title: "Media Freedom and Legal Advocacy",
+      description: "Defending journalists and media outlets from legal threats.Advising on media laws, defamation, and freedom of expression. Supporting resources for protecting sources and AI regulations.",
+      icon: iconBusiness,
+      category: 'Business',
+    },
+    {
+      title: "Technology and Intellectual Property Law",
+      description: "Advising on data protection, privacy, and cybersecurity compliance. Providing IP protection strategies for media and tech entities.Addressing legal challenges in technology and innovation."
+      ,
+      icon: iconBusiness,
+      category: 'Business',
+    },
+    {
+      title: "Employment Law",
+      description:"Drafting employment contracts and workplace policies.Addressing disputes and ensuring compliance with labor laws."
+      ,
+      icon: iconBusiness,
+      category: 'Business',
+    },
+    {
+      title: "Capacity-Building for Media Organizations",
+      description:"Supporting training programs on legal literacy and rights awareness.Creating guides on defamation laws and journalistic integrity."
+      ,
+      icon: iconBusiness,
+      category: 'Business',
+    },
+    {
       title: 'Business Law',
       description:
         'Providing tailored legal solutions for businesses of all sizes. Navigate contracts, compliance, and disputes with confidence.',
       icon: iconBusiness,
       category: 'Business',
+    },
+    {
+      title: "Corporate Governance and Compliance",
+      description:
+      "Assisting with corporate structuring and governance frameworks. Advising on regulatory compliance for businesses and NGOs.",
+      icon: iconCorporate,
+      category: 'Corporate',
     },
     {
       title: 'Healthcare Law',

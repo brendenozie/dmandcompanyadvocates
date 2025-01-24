@@ -1,0 +1,250 @@
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9fafc;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: #343a40;
+}
+
+a {
+    text-decoration: none;
+    color: #155724;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00b327;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, #343a40, #495057);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #ffc107;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    color: #faebd7;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* CEO Profile Section */
+.ceo-profile {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ceo-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ceo-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ceo-info {
+    max-width: 800px;
+}
+
+.ceo-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.ceo-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* Expertise Section */
+.expertise {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.expertise h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.expertise-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.expertise-card h3 {
+    font-size: 1.5rem;
+    color: #155724;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.expertise-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-card li {
+    margin: 10px 0;
+    color: #495057;
+    position: relative;
+    padding-left: 30px;
+}
+
+.expertise-card .icon {
+    color: #ffc107;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mission-vision>div {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.mission-vision h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.mission-vision p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Contact Section */
+.contact {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ceo-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mission-vision {
+        flex-direction: column;
+    }
+}
